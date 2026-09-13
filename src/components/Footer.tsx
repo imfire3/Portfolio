@@ -1,0 +1,46 @@
+import { FC } from 'react';
+import { ArrowUp } from 'lucide-react';
+
+export const Footer: FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="border-t border-white/10 bg-[#0a0b0e] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 font-mono text-xs text-white/50">
+        <div className="flex items-center gap-3">
+          <span className="text-white font-bold">© 2026 VINCENT GIACALONE</span>
+          <span>✦</span>
+          <span>PRODUCT · UX · AUTOMATION</span>
+        </div>
+
+        <div className="flex items-center gap-6">
+          <a
+            href="https://www.linkedin.com/in/vincentgiacalone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            LINKEDIN ↗
+          </a>
+
+          <a
+            href="mailto:vincentgiacalonepro@gmail.com"
+            className="hover:text-white transition-colors"
+          >
+            EMAIL ↗
+          </a>
+
+          <button
+            onClick={scrollToTop}
+            className="flex items-center gap-1.5 text-[#ff4b16] hover:text-white transition-colors cursor-pointer"
+          >
+            <span>RETOUR EN HAUT</span>
+            <ArrowUp className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+};
