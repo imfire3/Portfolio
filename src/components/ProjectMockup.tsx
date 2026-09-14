@@ -47,7 +47,7 @@ export const ProjectMockup: FC<ProjectMockupProps> = ({ type, title, imageUrl })
   // Render the user's raw image at 100% width, 100% height and centered
   if (targetImage && !imageFailed) {
     return (
-      <div className="relative w-full h-full min-h-[360px] sm:min-h-[440px] flex items-center justify-center overflow-hidden bg-[#090a0d]">
+      <div className="relative w-full h-full min-h-[360px] sm:min-h-[440px] flex items-center justify-center overflow-hidden bg-[var(--bg-mockup)]">
         <img
           src={targetImage}
           alt={title}
@@ -62,7 +62,7 @@ export const ProjectMockup: FC<ProjectMockupProps> = ({ type, title, imageUrl })
   // 1. MA PLACE AU PORT MOCKUP (Matching maplaceauport.com & screenshot)
   if (type === 'ma-place-au-port') {
     return (
-      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[#0b0d10] overflow-hidden rounded-2xl border border-white/10 group-hover:border-sky-500/40 transition-all duration-500">
+      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[var(--bg-mockup)] overflow-hidden rounded-2xl border border-[var(--border)] group-hover:border-sky-500/40 transition-all duration-500">
         {/* Ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-sky-500/10 blur-[100px] rounded-full pointer-events-none" />
 
@@ -179,7 +179,7 @@ export const ProjectMockup: FC<ProjectMockupProps> = ({ type, title, imageUrl })
   // 2. JOBTRACKER (JOBAPP) MOCKUP (Matching JobTracker screenshot)
   if (type === 'job-app') {
     return (
-      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[#0b0c10] overflow-hidden rounded-2xl border border-white/10 group-hover:border-emerald-500/40 transition-all duration-500">
+      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[var(--bg-mockup)] overflow-hidden rounded-2xl border border-[var(--border)] group-hover:border-emerald-500/40 transition-all duration-500">
         {/* Ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
 
@@ -307,7 +307,7 @@ export const ProjectMockup: FC<ProjectMockupProps> = ({ type, title, imageUrl })
   // 3. CATDEX MOCKUP (Matching cat-dex.netlify.app & screenshot)
   if (type === 'catdex') {
     return (
-      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[#0b0d10] overflow-hidden rounded-2xl border border-white/10 group-hover:border-indigo-500/40 transition-all duration-500">
+      <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[var(--bg-mockup)] overflow-hidden rounded-2xl border border-[var(--border)] group-hover:border-indigo-500/40 transition-all duration-500">
         {/* Ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none" />
 
@@ -404,7 +404,7 @@ export const ProjectMockup: FC<ProjectMockupProps> = ({ type, title, imageUrl })
 
   // 4. VOXE BOOSTER MOCKUP (Matching Voxe Booster screenshot & website)
   return (
-    <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[#0b0d10] overflow-hidden rounded-2xl border border-white/10 group-hover:border-amber-500/40 transition-all duration-500">
+    <div className="relative w-full h-full min-h-[400px] sm:min-h-[460px] flex items-center justify-center p-3 sm:p-5 bg-[var(--bg-mockup)] overflow-hidden rounded-2xl border border-[var(--border)] group-hover:border-amber-500/40 transition-all duration-500">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none" />
 

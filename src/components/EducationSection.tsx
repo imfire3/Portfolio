@@ -5,20 +5,18 @@ import { EDUCATIONS } from '../data/portfolioData';
 
 export const EducationSection: FC = () => {
   return (
-    <section id="formations" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
-      {/* Header */}
+    <section id="formations" className="py-24 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-[var(--border)]">
       <div className="mb-16">
-        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#ff4b16] mb-3">
+        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--text-3)] mb-3">
           <span>05 / FORMATIONS</span>
           <span>✦</span>
           <span>PARCOURS ACADÉMIQUE</span>
         </div>
-        <h2 className="text-4xl sm:text-6xl font-black font-display tracking-tight text-white">
-          Bases solides & <span className="font-normal italic text-[#ff4b16]">diplômes.</span>
+        <h2 className="text-4xl sm:text-6xl font-black font-display tracking-tight text-[var(--text)]">
+          Bases solides & <span className="font-normal italic text-[var(--text-3)]">diplômes.</span>
         </h2>
       </div>
 
-      {/* Grid of Degrees */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {EDUCATIONS.map((edu, idx) => (
           <motion.div
@@ -27,31 +25,31 @@ export const EducationSection: FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: idx * 0.1 }}
-            className="bg-[#14151a] border border-white/10 hover:border-[#ff4b16]/40 rounded-3xl p-6 flex flex-col justify-between transition-all group shadow-lg"
+            className="bg-[var(--bg-elevated)] border border-[var(--border)] hover:border-[var(--accent-border)] rounded-2xl p-6 flex flex-col justify-between transition-all group"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="font-mono text-xs text-[#ff4b16] font-bold">
+                <span className="font-mono text-xs text-[var(--text-3)] font-bold">
                   {edu.period}
                 </span>
-                <GraduationCap className="w-4 h-4 text-white/40 group-hover:text-[#ff4b16] transition-colors" />
+                <GraduationCap className="w-4 h-4 text-[var(--text-4)] group-hover:text-[var(--text-3)] transition-colors" />
               </div>
 
-              <h3 className="text-lg font-bold font-display text-white mb-1">
+              <h3 className="text-lg font-bold font-display text-[var(--text)] mb-1">
                 {edu.degree}
               </h3>
-              <div className="text-xs font-mono text-white/70 font-semibold mb-3">
+              <div className="text-xs font-mono text-[var(--text-2)] font-semibold mb-3">
                 {edu.school}
               </div>
 
               {edu.details && (
-                <p className="text-xs text-white/50 leading-relaxed">
+                <p className="text-xs text-[var(--text-3)] leading-relaxed">
                   {edu.details}
                 </p>
               )}
             </div>
 
-            <div className="pt-4 mt-6 border-t border-white/5 text-[10px] font-mono text-white/40">
+            <div className="pt-4 mt-6 border-t border-[var(--border-soft)] text-[10px] font-mono text-[var(--text-4)]">
               Certifié & Validé
             </div>
           </motion.div>

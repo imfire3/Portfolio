@@ -3,6 +3,7 @@ import { Project } from './types';
 import { PROJECTS } from './data/portfolioData';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { AboutSection } from './components/AboutSection';
 import { Ticker } from './components/Ticker';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ApproachSection } from './components/ApproachSection';
@@ -18,29 +19,25 @@ export default function App() {
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToProjects = () => {
     const el = document.getElementById('projets');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="min-h-screen bg-[#0e0f12] text-[#f5f7fa] font-sans antialiased selection:bg-[#ff4b16] selection:text-white bg-grid-pattern">
-      {/* Top Sticky Navigation */}
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] font-sans antialiased selection:bg-[var(--accent)] selection:text-[var(--bg)] bg-grid-pattern">
       <Navbar onOpenContact={scrollToContact} />
 
-      {/* Main Content Sections */}
       <main id="main-content">
         <Hero
           onExploreProjects={scrollToProjects}
           onOpenContact={scrollToContact}
         />
+
+        <AboutSection />
 
         <Ticker />
 
@@ -60,10 +57,8 @@ export default function App() {
         <ContactSection />
       </main>
 
-      {/* Site Footer */}
       <Footer />
 
-      {/* Case Study Deep-Dive Modal */}
       <CaseStudyModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
